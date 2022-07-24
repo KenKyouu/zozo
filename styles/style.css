@@ -1,0 +1,3270 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fbfbfb;
+}
+
+.wLimit {
+  width: 90%;
+  margin: auto;
+}
+
+.wLimitTwo {
+  width: 85%;
+  margin: auto;
+}
+
+p.price {
+  font-size: 1rem;
+}
+
+p.price::before {
+  content: "¥";
+}
+
+.like a i {
+  color: #a0a0a0;
+}
+
+.salePrice {
+  color: #ed293e;
+}
+
+.wLimit p.saleInfo {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.wLimit .title {
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wLimit .title h2 {
+  font-size: 1rem;
+}
+
+.wLimit .title a {
+  text-decoration: none;
+  color: #23abdd;
+  font-size: 0.8rem;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  padding-top: 10px;
+  background-color: #fbfbfb;
+}
+
+.wrap .cardBox {
+  margin-left: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 15px 0 0 15px;
+  overflow: hidden;
+}
+
+.wrap .cardBox .card {
+  width: 125px;
+}
+
+.wrap .cardBox .card .image {
+  width: 100%;
+  position: relative;
+}
+
+.wrap .cardBox .card .image a {
+  font-size: 0;
+}
+
+.wrap .cardBox .card .image a img {
+  width: 100%;
+}
+
+.wrap .cardBox .card .image .rank {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  text-align: center;
+}
+
+.wrap .cardBox .card .image .rank p.one,
+.wrap .cardBox .card .image .rank p.two,
+.wrap .cardBox .card .image .rank p.three {
+  width: 20px;
+  height: 22px;
+  padding-bottom: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .cardBox .card .image .rank p.one {
+  background-image: url(../images/1.png);
+}
+
+.wrap .cardBox .card .image .rank p.two {
+  background-image: url(../images/2.png);
+}
+
+.wrap .cardBox .card .image .rank p.three {
+  background-image: url(../images/3.png);
+}
+
+.wrap .cardBox .card .image .rank p.other {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .cardBox .card .image .tag {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+.wrap .cardBox .card .image .tag .cup {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  display: block;
+}
+
+.wrap .cardBox .card .image .tag .cup p {
+  background-color: rgba(119, 92, 218, 0.9);
+  color: #ffffff;
+  font-size: 0.6rem;
+  padding: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.wrap .cardBox .card .image .tag .saleSpan {
+  width: 100%;
+  height: 16px;
+  position: relative;
+  display: block;
+}
+
+.wrap .cardBox .card .image .tag .saleSpan p {
+  background-color: #ed293dda;
+  color: #ffffff;
+  font-size: 0.6rem;
+  padding: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.wrap .cardBox .card .itemTitle {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.wrap .cardBox .card .itemTitle h3 {
+  font-size: 0.9rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 10px 0;
+}
+
+.wrap .cardBox .card .info {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #efefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+.header .left {
+  width: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .left a.menu {
+  position: relative;
+  padding-right: 50px;
+}
+
+.header .left a.menu div {
+  width: 18px;
+  height: 2px;
+  background-color: #181818;
+}
+
+.header .left a.menu div::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #181818;
+  position: absolute;
+  top: 7px;
+}
+
+.header .left a.menu div::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #181818;
+  position: absolute;
+  top: -7px;
+}
+
+.header .middle {
+  width: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .middle a.logo {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.header .middle a.logo h1.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  color: #181818;
+}
+
+.header .right {
+  width: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .right a.search {
+  text-decoration: none;
+  color: #181818;
+  margin-right: 20px;
+  font-size: 1.4rem;
+}
+
+.header .right a.cart {
+  text-decoration: none;
+  color: #181818;
+  font-size: 1.4rem;
+}
+
+.headerImg {
+  width: 100%;
+  background-color: #efefef;
+}
+
+.headerImg a {
+  font-size: 0;
+}
+
+.headerImg a img {
+  width: 100%;
+}
+
+.searchBar {
+  background-color: #efefef;
+}
+
+.searchBar .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchBar .search form {
+  background-color: white;
+  margin-top: 10px;
+  width: 90%;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.searchBar .search form button {
+  font-size: 1rem;
+  background-color: white;
+  border: none;
+  color: #4e4e4e;
+  margin-right: 10px;
+}
+
+.searchBar .search form input {
+  border: none;
+  font-size: 0.8rem;
+}
+
+.searchBar .choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchBar .choice a {
+  display: block;
+  width: calc(100% / 3);
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.searchBar .choice a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchBar .choice a div span {
+  color: #a0a0a0;
+}
+
+.searchBar .gender {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchBar .gender a {
+  display: block;
+  width: calc(100% / 3);
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.searchBar .gender a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+}
+
+.searchBar .gender a .male {
+  color: #0064d8;
+}
+
+.searchBar .gender a .female {
+  color: #f26868;
+}
+
+.searchBar .gender a .kid {
+  color: #f6ca55;
+}
+
+.banner .bannerBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .bannerBox a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 0;
+}
+
+.banner .bannerBox a .card {
+  width: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .bannerBox a .card img {
+  width: 100%;
+}
+
+.banner .bannerBox a .card h3,
+.banner .bannerBox a .card p {
+  position: absolute;
+  left: 10px;
+}
+
+.banner .bannerBox a .card h3 {
+  font-size: 1rem;
+  bottom: 40px;
+}
+
+.banner .bannerBox a .card p {
+  font-size: 0.8rem;
+  bottom: 20px;
+}
+
+.pt {
+  margin: 20px auto;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pt a {
+  font-size: 0;
+}
+
+.pt a img {
+  width: 100%;
+}
+
+.circleCard {
+  margin-top: 25px;
+  padding: 20px 0 30px 0;
+  -webkit-box-shadow: 0px -12px 8px -12px rgba(179, 179, 179, 0.652);
+          box-shadow: 0px -12px 8px -12px rgba(179, 179, 179, 0.652);
+  background-color: #fbfbfb;
+}
+
+.circleCard .range {
+  width: 90%;
+  margin: auto;
+}
+
+.circleCard .range .cardBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.circleCard .range .cardBox a {
+  text-decoration: none;
+  font-size: 0;
+  width: calc(100% / 4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.circleCard .range .cardBox a .card {
+  width: 80%;
+}
+
+.circleCard .range .cardBox a .card .image {
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circleCard .range .cardBox a .card .image img {
+  width: 100%;
+}
+
+.circleCard .range .cardBox a .card h3 {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: black;
+  text-align: center;
+}
+
+.bdbg {
+  background-color: #fbfbfb;
+}
+
+.sectionTwo .wLimit #gener {
+  border: none;
+  background-color: #efefef;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+.brand {
+  padding: 20px 0;
+  background-color: #3b3b3b;
+  overflow: hidden;
+}
+
+.brand .wLimit .title h2 {
+  color: #ffffff;
+}
+
+.brand .brandBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+  min-width: 1050px;
+  padding: 0 20px;
+}
+
+.brand .brandBox a {
+  text-decoration: none;
+  font-size: 0;
+}
+
+.brand .brandBox a .brandCard {
+  width: 132px;
+}
+
+.brand .brandBox a .brandCard .image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.brand .brandBox a .brandCard .image img {
+  width: 100%;
+}
+
+.brand .brandBox a .brandCard h3 {
+  font-size: 0.8rem;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 10px 0;
+}
+
+.brand .brandBox a .brandCard p {
+  color: #a0a0a0;
+  font-size: 0.7rem;
+}
+
+.sectionTen {
+  padding-top: 40px;
+}
+
+.powerWear {
+  background-color: #fbfbfb;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.powerWear .wearRank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-width: 1000px;
+}
+
+.powerWear .wearRank .cardW {
+  width: 132px;
+}
+
+.powerWear .wearRank .cardW a {
+  font-size: 0;
+  text-decoration: none;
+}
+
+.powerWear .wearRank .cardW a .wearRankCard {
+  width: 100%;
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .image {
+  width: 100%;
+  position: relative;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .image img {
+  width: 100%;
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .rank {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  text-align: center;
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .rank p.one,
+.powerWear .wearRank .cardW a .wearRankCard .rank p.two,
+.powerWear .wearRank .cardW a .wearRankCard .rank p.three {
+  width: 20px;
+  height: 22px;
+  padding-bottom: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .rank p.one {
+  background-image: url(../images/1.png);
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .rank p.two {
+  background-image: url(../images/2.png);
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .rank p.three {
+  background-image: url(../images/3.png);
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .rank p.other {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .stature {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  display: block;
+  text-align: center;
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .stature p {
+  padding: 0 15px 2px 15px;
+  font-size: 0.8rem;
+  color: #fff;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .stature p::after {
+  content: "cm";
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .content h3 {
+  font-size: 0.9rem;
+  color: black;
+}
+
+.powerWear .wearRank .cardW a .wearRankCard .content p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.news {
+  background-color: #fbfbfb;
+  padding-bottom: 50px;
+}
+
+.news .newsCard {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 15px rgba(200, 200, 200, 0.567);
+          box-shadow: 1px 1px 15px rgba(200, 200, 200, 0.567);
+}
+
+.news .newsCard .newsBox {
+  padding: 15px;
+}
+
+.news .newsCard .newsBox a {
+  font-size: 0;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news .newsCard .newsBox a .image {
+  min-width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.news .newsCard .newsBox a .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.news .newsCard .newsBox a .newsContent {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news .newsCard .newsBox a .newsContent h3 {
+  font-size: 0.8rem;
+  color: black;
+}
+
+.news .newsCard .newsBox a .newsContent .p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news .newsCard .newsBox a .newsContent .p p.first {
+  font-size: 0.7rem;
+  color: #a0a0a0;
+}
+
+.news .newsCard .newsBox a .newsContent .p p.second {
+  font-size: 0.7rem;
+  color: #a0a0a0;
+}
+
+.news .newsCard .newsBox a .newsContent .p p.second::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0.6rem;
+  background-color: rgba(45, 45, 45, 0.2);
+  margin: 0 5px;
+}
+
+.popular {
+  padding: 20px 0 50px 20px;
+  background-color: #fbfbfb;
+  overflow: hidden;
+}
+
+.popular .wLimit .title h2 {
+  color: black;
+}
+
+.popular .brandBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-width: 1000px;
+  overflow: hidden;
+}
+
+.popular .brandBox a {
+  text-decoration: none;
+  font-size: 0;
+}
+
+.popular .brandBox a .brandCard {
+  width: 132px;
+}
+
+.popular .brandBox a .brandCard .image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.popular .brandBox a .brandCard .image img {
+  width: 100%;
+}
+
+.popular .brandBox a .brandCard h3 {
+  font-size: 0.8rem;
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 10px 0;
+}
+
+.popular .brandBox a .brandCard p {
+  color: #a0a0a0;
+  font-size: 0.7rem;
+}
+
+.itemMore {
+  background-color: #fbfbfb;
+}
+
+.itemMore .itemClass .classCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-top: 1px solid rgba(45, 45, 45, 0.05);
+  background-color: white;
+}
+
+.itemMore .itemClass .classCard .left {
+  margin-right: 20px;
+}
+
+.itemMore .itemClass .classCard .left .image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.itemMore .itemClass .classCard .left .image img {
+  width: 100%;
+}
+
+.itemMore .itemClass .classCard .middle .classTitle h3 {
+  font-size: 0.8rem;
+}
+
+.itemMore .itemClass .classCard .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.karaSearch {
+  background-color: #fbfbfb;
+  padding: 40px 0;
+}
+
+.karaSearch a {
+  font-size: 0;
+  text-decoration: none;
+}
+
+.karaSearch a .shopSearch,
+.karaSearch a .brandSearch {
+  padding: 10px 0;
+  border: 1px solid #23abdd;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.karaSearch a .shopSearch h3,
+.karaSearch a .brandSearch h3 {
+  font-size: 0.9rem;
+  color: #23abdd;
+}
+
+.karaSearch a .brandSearch {
+  margin-top: 15px;
+}
+
+.borTop {
+  border-top: 1px solid rgba(45, 45, 45, 0.05);
+  padding: 40px 0;
+}
+
+.borTop .brandBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 20px;
+}
+
+.borTop .brandBox a .brandCard {
+  margin-right: 12px;
+}
+
+.bottomCarousel {
+  background-color: #efefef;
+  padding: 20px 0;
+}
+
+.bottomCarousel .image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.bottomCarousel .image img {
+  width: 100%;
+}
+
+.companyInfo {
+  background-color: #efefef;
+  padding-bottom: 40px;
+}
+
+.companyInfo .title p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.companyInfo .itemClass .classCard {
+  background-color: #efefef;
+}
+
+.companyInfo .itemClass .classCard .middle .classTitle h3 {
+  font-size: 0.9rem;
+}
+
+.companyInfo .itemClass .classCard .middle .classTitle p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.companyInfo .companyInfoMore {
+  border-top: 1px solid rgba(45, 45, 45, 0.05);
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.companyInfo .companyInfoMore a {
+  text-decoration: none;
+  color: #23abdd;
+  font-size: 0.8rem;
+}
+
+.smartPhoneApp {
+  background-color: #efefef;
+  padding-bottom: 40px;
+}
+
+.smartPhoneApp .wLimit .title p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.smartPhoneApp .itemClass .classCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-top: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.smartPhoneApp .itemClass .classCard .left {
+  margin-right: 20px;
+}
+
+.smartPhoneApp .itemClass .classCard .left .imageOne {
+  width: 45px;
+  height: 45px;
+  background-image: url(https://o.imgz.jp/sp/common/v16/img/ftr_app_icons_2016.png);
+  background-repeat: no-repeat;
+  background-size: 45px;
+  background-position: 0 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.smartPhoneApp .itemClass .classCard .left .imageTwo {
+  width: 45px;
+  height: 45px;
+  background-image: url(https://o.imgz.jp/sp/common/v16/img/ftr_app_icons_2016.png);
+  background-repeat: no-repeat;
+  background-size: 45px;
+  background-position: 0 -90px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.smartPhoneApp .itemClass .classCard .middle .classTitle h3 {
+  font-size: 0.9rem;
+}
+
+.smartPhoneApp .itemClass .classCard .middle .classTitle p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.relation {
+  background-color: #efefef;
+  padding-bottom: 40px 0;
+}
+
+.relation .wLimit .title p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.relation .itemClass .classCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-top: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.relation .itemClass .classCard .middle .classTitle h3 {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+
+.relation .itemClass .classCard .middle .classTitle p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.relation .itemClass .classCard .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.relation .itemClass .classCard .right .arrow {
+  color: #a0a0a0;
+}
+
+.relation .itemClass .borBottom {
+  border-bottom: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.footer {
+  background-color: #efefef;
+  padding: 30px 0;
+}
+
+.footer .copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .copy h4 {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.headerPC {
+  background-color: #efefef;
+  padding: 15px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerPC .container .left {
+  margin-right: 30px;
+}
+
+.headerPC .container .left a {
+  text-decoration: none;
+  color: black;
+}
+
+.headerPC .container .left a .logo h1 {
+  font-size: 1.8rem;
+}
+
+.headerPC .container .middle .searchBar input {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 8px;
+}
+
+.headerPC .container .right a {
+  text-decoration: none;
+  color: #181818;
+}
+
+.headerImgPC a .image {
+  width: 100%;
+  height: 35px;
+  background-image: url(https://o.imgz.jp/pc/sale/2022summer/banner/obi-0624.jpg);
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+.searchBarPC {
+  background-color: #efefef;
+}
+
+.searchBarPC a {
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+.searchBarPC a .col {
+  height: 100%;
+}
+
+.searchBarPC a .col h3 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 20px 0;
+}
+
+.genderPC {
+  padding: 20px 0;
+}
+
+.genderPC .container .gender a {
+  text-decoration: none;
+}
+
+.genderPC .container .gender a div {
+  padding: 5px 15px;
+}
+
+.genderPC .container .gender a .all {
+  background-color: #efefef;
+  border-radius: 7px;
+}
+
+.genderPC .container .gender a .all p {
+  color: #181818;
+}
+
+.genderPC .container .gender a .male p {
+  color: #0064d8;
+}
+
+.genderPC .container .gender a .female p {
+  color: #f26868;
+}
+
+.genderPC .container .gender a .kid p {
+  color: #f6ca55;
+}
+
+.genderPC .container .haveToKnow a {
+  color: #a0a0a0;
+}
+
+.carouselPC {
+  padding-bottom: 40px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.carouselPC .carouselBox .carouselCard {
+  width: 450px;
+}
+
+.carouselPC .carouselBox .carouselCard a {
+  width: 100%;
+}
+
+.carouselPC .carouselBox .carouselCard a .cardPosition {
+  position: relative;
+}
+
+.carouselPC .carouselBox .carouselCard a .cardPosition .image {
+  width: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.carouselPC .carouselBox .carouselCard a .cardPosition .image img {
+  width: 100%;
+}
+
+.carouselPC .carouselBox .carouselCard a .cardPosition h3 {
+  font-size: 1.4rem;
+  color: white;
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+}
+
+.carouselPC .carouselBox .carouselCard a .cardPosition p {
+  font-size: 1.1rem;
+  color: white;
+  position: absolute;
+  bottom: 25px;
+  left: 10px;
+}
+
+.pcLeftSectionOne {
+  background-color: #fbfbfb;
+  margin-top: 30px;
+}
+
+.pcLeftSectionOne h3 {
+  font-size: 1.2rem;
+  padding: 0 0 15px 0;
+  color: #2d2d2d;
+}
+
+.pcLeftSectionOne .sagasuOne ul {
+  list-style-type: none;
+}
+
+.pcLeftSectionOne .sagasuOne ul li {
+  padding: 3px 0;
+}
+
+.pcLeftSectionOne .sagasuOne ul li a {
+  color: #a0a0a0;
+  font-size: 0.8rem;
+}
+
+.pcLeftSectionTwo,
+.pcLeftSectionThree {
+  background-color: #fbfbfb;
+  border-top: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.pcLeftSectionTwo h3.sagasuTitle,
+.pcLeftSectionThree h3.sagasuTitle {
+  font-size: 1.2rem;
+  padding: 15px 0;
+  color: #2d2d2d;
+}
+
+.pcLeftSectionTwo .sagasuTwo ul,
+.pcLeftSectionThree .sagasuTwo ul {
+  list-style-type: none;
+}
+
+.pcLeftSectionTwo .sagasuTwo ul li a,
+.pcLeftSectionThree .sagasuTwo ul li a {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+.pcLeftSectionTwo .sagasuTwo ul li a:hover,
+.pcLeftSectionThree .sagasuTwo ul li a:hover {
+  background-color: rgba(45, 45, 45, 0.05);
+  text-decoration: none;
+}
+
+.pcLeftSectionTwo .sagasuTwo ul li a .title,
+.pcLeftSectionThree .sagasuTwo ul li a .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pcLeftSectionTwo .sagasuTwo ul li a .title h3,
+.pcLeftSectionThree .sagasuTwo ul li a .title h3 {
+  font-size: 0.8rem;
+}
+
+.pcLeftSectionTwo .sagasuTwo ul li a .arrow,
+.pcLeftSectionThree .sagasuTwo ul li a .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pcLeftSectionFour .banner a {
+  width: 100%;
+}
+
+.pcLeftSectionFour .banner a .image {
+  margin: 20px 0;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pcLeftSectionFour .banner a .image img {
+  width: 100%;
+}
+
+.pcLeftSectionFive .title {
+  margin-bottom: 20px;
+}
+
+.pcLeftSectionFive .title h3 {
+  font-size: 1.2rem;
+  color: #2d2d2d;
+}
+
+.pcLeftSectionFive .focus .focusTitle {
+  margin-bottom: 15px;
+}
+
+.pcLeftSectionFive .focus .focusTitle h3 {
+  font-size: 0.9rem;
+  color: #2d2d2d;
+}
+
+.pcLeftSectionFive .focus .focusCard {
+  margin-bottom: 30px;
+}
+
+.pcLeftSectionFive .focus .focusCard a {
+  text-decoration: none;
+}
+
+.pcLeftSectionFive .focus .focusCard a .image {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 5px rgba(45, 45, 45, 0.1);
+          box-shadow: 0 0 5px rgba(45, 45, 45, 0.1);
+}
+
+.pcLeftSectionFive .focus .focusCard a .image img {
+  width: 100%;
+}
+
+.pcLeftSectionFive .focus .focusCard a .content {
+  margin-top: 10px;
+}
+
+.pcLeftSectionFive .focus .focusCard a .content h3 {
+  font-size: 0.9rem;
+  color: #2d2d2d;
+}
+
+.pcLeftSectionFive .focus .focusCard a .content p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+
+.pcLeftSectionSix {
+  margin-bottom: 50px;
+}
+
+.pcLeftSectionSix .title {
+  margin-bottom: 20px;
+}
+
+.pcLeftSectionSix .title h3 {
+  font-size: 1.2rem;
+  color: #2d2d2d;
+}
+
+.pcLeftSectionSix .pcNewsBox {
+  width: 85%;
+}
+
+.pcLeftSectionSix .pcNewsBox .pcNewsCard {
+  margin-bottom: 20px;
+}
+
+.pcLeftSectionSix .pcNewsBox .pcNewsCard .pcNews {
+  margin-bottom: 5px;
+}
+
+.pcLeftSectionSix .pcNewsBox .pcNewsCard .pcNews a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+.pcLeftSectionSix .pcNewsBox .pcNewsCard .pcNews a:hover {
+  text-decoration: underline;
+}
+
+.pcLeftSectionSix .pcNewsBox .pcNewsCard p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.pcLeftSectionSeven .title {
+  margin-bottom: 20px;
+}
+
+.pcLeftSectionSeven .title h3 {
+  font-size: 1.2rem;
+  color: #2d2d2d;
+}
+
+.pcLeftSectionSeven .banner {
+  width: 85%;
+}
+
+.pcLeftSectionSeven .banner a {
+  width: 100%;
+}
+
+.pcLeftSectionSeven .banner a .image {
+  margin: 20px 0;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pcLeftSectionSeven .banner a .image img {
+  width: 100%;
+}
+
+.pcLeftSectionSeven .pcNewsBox {
+  width: 85%;
+}
+
+.pcLeftSectionSeven .pcNewsBox .pcNewsCard {
+  margin-bottom: 20px;
+}
+
+.pcLeftSectionSeven .pcNewsBox .pcNewsCard .pcNews {
+  margin-bottom: 5px;
+}
+
+.pcLeftSectionSeven .pcNewsBox .pcNewsCard .pcNews a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+.pcLeftSectionSeven .pcNewsBox .pcNewsCard .pcNews a:hover {
+  text-decoration: underline;
+}
+
+.pcLeftSectionSeven .pcNewsBox .pcNewsCard p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.pcLeftSectionSeven .viewMore {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pcLeftSectionSeven .viewMore a {
+  font-size: 0.8rem;
+  color: #23abdd;
+}
+
+.pcRightSectionOne {
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.pcRightSectionOne .banner a .image {
+  width: 100%;
+}
+
+.pcRightSectionOne .banner a .image img {
+  width: 100%;
+}
+
+.pcRightSectionTwo,
+.pcRightSectionThree,
+.pcRightSectionFour,
+.pcRightSectionFive,
+.pcRightSectionSix,
+.pcRightSectionSeven,
+.pcRightSectionEight,
+.pcRightSectionNine,
+.pcRightSectionTen,
+.pcRightSectionTwelve,
+.pcRightSectionThirteen,
+.pcRightSectionFourteen,
+.pcRightSectionFifteen,
+.pcRightSectionSixteen,
+.pcRightSectionSeventeen,
+.pcRightSectionEighteen,
+.pcRightSectionNineteen,
+.pcRightSectionTwenty,
+.pcRightSectionTwentyOne,
+.pcRightSectionTwentyTwo {
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.pcRightSectionTwo .itemCardTitle,
+.pcRightSectionThree .itemCardTitle,
+.pcRightSectionFour .itemCardTitle,
+.pcRightSectionFive .itemCardTitle,
+.pcRightSectionSix .itemCardTitle,
+.pcRightSectionSeven .itemCardTitle,
+.pcRightSectionEight .itemCardTitle,
+.pcRightSectionNine .itemCardTitle,
+.pcRightSectionTen .itemCardTitle,
+.pcRightSectionTwelve .itemCardTitle,
+.pcRightSectionThirteen .itemCardTitle,
+.pcRightSectionFourteen .itemCardTitle,
+.pcRightSectionFifteen .itemCardTitle,
+.pcRightSectionSixteen .itemCardTitle,
+.pcRightSectionSeventeen .itemCardTitle,
+.pcRightSectionEighteen .itemCardTitle,
+.pcRightSectionNineteen .itemCardTitle,
+.pcRightSectionTwenty .itemCardTitle,
+.pcRightSectionTwentyOne .itemCardTitle,
+.pcRightSectionTwentyTwo .itemCardTitle {
+  padding-bottom: 20px;
+}
+
+.pcRightSectionTwo .itemCardTitle p,
+.pcRightSectionThree .itemCardTitle p,
+.pcRightSectionFour .itemCardTitle p,
+.pcRightSectionFive .itemCardTitle p,
+.pcRightSectionSix .itemCardTitle p,
+.pcRightSectionSeven .itemCardTitle p,
+.pcRightSectionEight .itemCardTitle p,
+.pcRightSectionNine .itemCardTitle p,
+.pcRightSectionTen .itemCardTitle p,
+.pcRightSectionTwelve .itemCardTitle p,
+.pcRightSectionThirteen .itemCardTitle p,
+.pcRightSectionFourteen .itemCardTitle p,
+.pcRightSectionFifteen .itemCardTitle p,
+.pcRightSectionSixteen .itemCardTitle p,
+.pcRightSectionSeventeen .itemCardTitle p,
+.pcRightSectionEighteen .itemCardTitle p,
+.pcRightSectionNineteen .itemCardTitle p,
+.pcRightSectionTwenty .itemCardTitle p,
+.pcRightSectionTwentyOne .itemCardTitle p,
+.pcRightSectionTwentyTwo .itemCardTitle p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #a0a0a0;
+}
+
+.pcRightSectionTwo .itemCardTitle .titleAndLink,
+.pcRightSectionThree .itemCardTitle .titleAndLink,
+.pcRightSectionFour .itemCardTitle .titleAndLink,
+.pcRightSectionFive .itemCardTitle .titleAndLink,
+.pcRightSectionSix .itemCardTitle .titleAndLink,
+.pcRightSectionSeven .itemCardTitle .titleAndLink,
+.pcRightSectionEight .itemCardTitle .titleAndLink,
+.pcRightSectionNine .itemCardTitle .titleAndLink,
+.pcRightSectionTen .itemCardTitle .titleAndLink,
+.pcRightSectionTwelve .itemCardTitle .titleAndLink,
+.pcRightSectionThirteen .itemCardTitle .titleAndLink,
+.pcRightSectionFourteen .itemCardTitle .titleAndLink,
+.pcRightSectionFifteen .itemCardTitle .titleAndLink,
+.pcRightSectionSixteen .itemCardTitle .titleAndLink,
+.pcRightSectionSeventeen .itemCardTitle .titleAndLink,
+.pcRightSectionEighteen .itemCardTitle .titleAndLink,
+.pcRightSectionNineteen .itemCardTitle .titleAndLink,
+.pcRightSectionTwenty .itemCardTitle .titleAndLink,
+.pcRightSectionTwentyOne .itemCardTitle .titleAndLink,
+.pcRightSectionTwentyTwo .itemCardTitle .titleAndLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pcRightSectionTwo .itemCardTitle .titleAndLink h3,
+.pcRightSectionThree .itemCardTitle .titleAndLink h3,
+.pcRightSectionFour .itemCardTitle .titleAndLink h3,
+.pcRightSectionFive .itemCardTitle .titleAndLink h3,
+.pcRightSectionSix .itemCardTitle .titleAndLink h3,
+.pcRightSectionSeven .itemCardTitle .titleAndLink h3,
+.pcRightSectionEight .itemCardTitle .titleAndLink h3,
+.pcRightSectionNine .itemCardTitle .titleAndLink h3,
+.pcRightSectionTen .itemCardTitle .titleAndLink h3,
+.pcRightSectionTwelve .itemCardTitle .titleAndLink h3,
+.pcRightSectionThirteen .itemCardTitle .titleAndLink h3,
+.pcRightSectionFourteen .itemCardTitle .titleAndLink h3,
+.pcRightSectionFifteen .itemCardTitle .titleAndLink h3,
+.pcRightSectionSixteen .itemCardTitle .titleAndLink h3,
+.pcRightSectionSeventeen .itemCardTitle .titleAndLink h3,
+.pcRightSectionEighteen .itemCardTitle .titleAndLink h3,
+.pcRightSectionNineteen .itemCardTitle .titleAndLink h3,
+.pcRightSectionTwenty .itemCardTitle .titleAndLink h3,
+.pcRightSectionTwentyOne .itemCardTitle .titleAndLink h3,
+.pcRightSectionTwentyTwo .itemCardTitle .titleAndLink h3 {
+  font-size: 1.4rem;
+  color: #181818;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pcRightSectionTwo .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionThree .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionFour .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionFive .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionSix .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionSeven .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionEight .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionNine .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionTen .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionTwelve .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionThirteen .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionFourteen .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionFifteen .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionSixteen .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionSeventeen .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionEighteen .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionNineteen .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionTwenty .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionTwentyOne .itemCardTitle .titleAndLink .selection #pcGener,
+.pcRightSectionTwentyTwo .itemCardTitle .titleAndLink .selection #pcGener {
+  margin-left: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border: none;
+  background-color: #efefef;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.pcRightSectionTwo .itemCardTitle .titleAndLink a,
+.pcRightSectionThree .itemCardTitle .titleAndLink a,
+.pcRightSectionFour .itemCardTitle .titleAndLink a,
+.pcRightSectionFive .itemCardTitle .titleAndLink a,
+.pcRightSectionSix .itemCardTitle .titleAndLink a,
+.pcRightSectionSeven .itemCardTitle .titleAndLink a,
+.pcRightSectionEight .itemCardTitle .titleAndLink a,
+.pcRightSectionNine .itemCardTitle .titleAndLink a,
+.pcRightSectionTen .itemCardTitle .titleAndLink a,
+.pcRightSectionTwelve .itemCardTitle .titleAndLink a,
+.pcRightSectionThirteen .itemCardTitle .titleAndLink a,
+.pcRightSectionFourteen .itemCardTitle .titleAndLink a,
+.pcRightSectionFifteen .itemCardTitle .titleAndLink a,
+.pcRightSectionSixteen .itemCardTitle .titleAndLink a,
+.pcRightSectionSeventeen .itemCardTitle .titleAndLink a,
+.pcRightSectionEighteen .itemCardTitle .titleAndLink a,
+.pcRightSectionNineteen .itemCardTitle .titleAndLink a,
+.pcRightSectionTwenty .itemCardTitle .titleAndLink a,
+.pcRightSectionTwentyOne .itemCardTitle .titleAndLink a,
+.pcRightSectionTwentyTwo .itemCardTitle .titleAndLink a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 0.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #23abdd;
+}
+
+.pcRightSectionTwo .itemCardBox,
+.pcRightSectionThree .itemCardBox,
+.pcRightSectionFour .itemCardBox,
+.pcRightSectionFive .itemCardBox,
+.pcRightSectionSix .itemCardBox,
+.pcRightSectionSeven .itemCardBox,
+.pcRightSectionEight .itemCardBox,
+.pcRightSectionNine .itemCardBox,
+.pcRightSectionTen .itemCardBox,
+.pcRightSectionTwelve .itemCardBox,
+.pcRightSectionThirteen .itemCardBox,
+.pcRightSectionFourteen .itemCardBox,
+.pcRightSectionFifteen .itemCardBox,
+.pcRightSectionSixteen .itemCardBox,
+.pcRightSectionSeventeen .itemCardBox,
+.pcRightSectionEighteen .itemCardBox,
+.pcRightSectionNineteen .itemCardBox,
+.pcRightSectionTwenty .itemCardBox,
+.pcRightSectionTwentyOne .itemCardBox,
+.pcRightSectionTwentyTwo .itemCardBox {
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 4420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+.pcRightSectionTwo .itemCardBox .card,
+.pcRightSectionThree .itemCardBox .card,
+.pcRightSectionFour .itemCardBox .card,
+.pcRightSectionFive .itemCardBox .card,
+.pcRightSectionSix .itemCardBox .card,
+.pcRightSectionSeven .itemCardBox .card,
+.pcRightSectionEight .itemCardBox .card,
+.pcRightSectionNine .itemCardBox .card,
+.pcRightSectionTen .itemCardBox .card,
+.pcRightSectionTwelve .itemCardBox .card,
+.pcRightSectionThirteen .itemCardBox .card,
+.pcRightSectionFourteen .itemCardBox .card,
+.pcRightSectionFifteen .itemCardBox .card,
+.pcRightSectionSixteen .itemCardBox .card,
+.pcRightSectionSeventeen .itemCardBox .card,
+.pcRightSectionEighteen .itemCardBox .card,
+.pcRightSectionNineteen .itemCardBox .card,
+.pcRightSectionTwenty .itemCardBox .card,
+.pcRightSectionTwentyOne .itemCardBox .card,
+.pcRightSectionTwentyTwo .itemCardBox .card {
+  width: 170px;
+}
+
+.pcRightSectionTwo .itemCardBox .card a,
+.pcRightSectionThree .itemCardBox .card a,
+.pcRightSectionFour .itemCardBox .card a,
+.pcRightSectionFive .itemCardBox .card a,
+.pcRightSectionSix .itemCardBox .card a,
+.pcRightSectionSeven .itemCardBox .card a,
+.pcRightSectionEight .itemCardBox .card a,
+.pcRightSectionNine .itemCardBox .card a,
+.pcRightSectionTen .itemCardBox .card a,
+.pcRightSectionTwelve .itemCardBox .card a,
+.pcRightSectionThirteen .itemCardBox .card a,
+.pcRightSectionFourteen .itemCardBox .card a,
+.pcRightSectionFifteen .itemCardBox .card a,
+.pcRightSectionSixteen .itemCardBox .card a,
+.pcRightSectionSeventeen .itemCardBox .card a,
+.pcRightSectionEighteen .itemCardBox .card a,
+.pcRightSectionNineteen .itemCardBox .card a,
+.pcRightSectionTwenty .itemCardBox .card a,
+.pcRightSectionTwentyOne .itemCardBox .card a,
+.pcRightSectionTwentyTwo .itemCardBox .card a {
+  text-decoration: none;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image,
+.pcRightSectionThree .itemCardBox .card a .image,
+.pcRightSectionFour .itemCardBox .card a .image,
+.pcRightSectionFive .itemCardBox .card a .image,
+.pcRightSectionSix .itemCardBox .card a .image,
+.pcRightSectionSeven .itemCardBox .card a .image,
+.pcRightSectionEight .itemCardBox .card a .image,
+.pcRightSectionNine .itemCardBox .card a .image,
+.pcRightSectionTen .itemCardBox .card a .image,
+.pcRightSectionTwelve .itemCardBox .card a .image,
+.pcRightSectionThirteen .itemCardBox .card a .image,
+.pcRightSectionFourteen .itemCardBox .card a .image,
+.pcRightSectionFifteen .itemCardBox .card a .image,
+.pcRightSectionSixteen .itemCardBox .card a .image,
+.pcRightSectionSeventeen .itemCardBox .card a .image,
+.pcRightSectionEighteen .itemCardBox .card a .image,
+.pcRightSectionNineteen .itemCardBox .card a .image,
+.pcRightSectionTwenty .itemCardBox .card a .image,
+.pcRightSectionTwentyOne .itemCardBox .card a .image,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image {
+  margin-bottom: 15px;
+  width: 100%;
+  position: relative;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image img,
+.pcRightSectionThree .itemCardBox .card a .image img,
+.pcRightSectionFour .itemCardBox .card a .image img,
+.pcRightSectionFive .itemCardBox .card a .image img,
+.pcRightSectionSix .itemCardBox .card a .image img,
+.pcRightSectionSeven .itemCardBox .card a .image img,
+.pcRightSectionEight .itemCardBox .card a .image img,
+.pcRightSectionNine .itemCardBox .card a .image img,
+.pcRightSectionTen .itemCardBox .card a .image img,
+.pcRightSectionTwelve .itemCardBox .card a .image img,
+.pcRightSectionThirteen .itemCardBox .card a .image img,
+.pcRightSectionFourteen .itemCardBox .card a .image img,
+.pcRightSectionFifteen .itemCardBox .card a .image img,
+.pcRightSectionSixteen .itemCardBox .card a .image img,
+.pcRightSectionSeventeen .itemCardBox .card a .image img,
+.pcRightSectionEighteen .itemCardBox .card a .image img,
+.pcRightSectionNineteen .itemCardBox .card a .image img,
+.pcRightSectionTwenty .itemCardBox .card a .image img,
+.pcRightSectionTwentyOne .itemCardBox .card a .image img,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image img {
+  width: 100%;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .PR,
+.pcRightSectionThree .itemCardBox .card a .image .PR,
+.pcRightSectionFour .itemCardBox .card a .image .PR,
+.pcRightSectionFive .itemCardBox .card a .image .PR,
+.pcRightSectionSix .itemCardBox .card a .image .PR,
+.pcRightSectionSeven .itemCardBox .card a .image .PR,
+.pcRightSectionEight .itemCardBox .card a .image .PR,
+.pcRightSectionNine .itemCardBox .card a .image .PR,
+.pcRightSectionTen .itemCardBox .card a .image .PR,
+.pcRightSectionTwelve .itemCardBox .card a .image .PR,
+.pcRightSectionThirteen .itemCardBox .card a .image .PR,
+.pcRightSectionFourteen .itemCardBox .card a .image .PR,
+.pcRightSectionFifteen .itemCardBox .card a .image .PR,
+.pcRightSectionSixteen .itemCardBox .card a .image .PR,
+.pcRightSectionSeventeen .itemCardBox .card a .image .PR,
+.pcRightSectionEighteen .itemCardBox .card a .image .PR,
+.pcRightSectionNineteen .itemCardBox .card a .image .PR,
+.pcRightSectionTwenty .itemCardBox .card a .image .PR,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .PR,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .PR {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(45, 45, 45, 0.2);
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .PR p,
+.pcRightSectionThree .itemCardBox .card a .image .PR p,
+.pcRightSectionFour .itemCardBox .card a .image .PR p,
+.pcRightSectionFive .itemCardBox .card a .image .PR p,
+.pcRightSectionSix .itemCardBox .card a .image .PR p,
+.pcRightSectionSeven .itemCardBox .card a .image .PR p,
+.pcRightSectionEight .itemCardBox .card a .image .PR p,
+.pcRightSectionNine .itemCardBox .card a .image .PR p,
+.pcRightSectionTen .itemCardBox .card a .image .PR p,
+.pcRightSectionTwelve .itemCardBox .card a .image .PR p,
+.pcRightSectionThirteen .itemCardBox .card a .image .PR p,
+.pcRightSectionFourteen .itemCardBox .card a .image .PR p,
+.pcRightSectionFifteen .itemCardBox .card a .image .PR p,
+.pcRightSectionSixteen .itemCardBox .card a .image .PR p,
+.pcRightSectionSeventeen .itemCardBox .card a .image .PR p,
+.pcRightSectionEighteen .itemCardBox .card a .image .PR p,
+.pcRightSectionNineteen .itemCardBox .card a .image .PR p,
+.pcRightSectionTwenty .itemCardBox .card a .image .PR p,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .PR p,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .PR p {
+  font-size: 0.7rem;
+  color: white;
+  padding: 3px 10px;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcTag,
+.pcRightSectionThree .itemCardBox .card a .image .pcTag,
+.pcRightSectionFour .itemCardBox .card a .image .pcTag,
+.pcRightSectionFive .itemCardBox .card a .image .pcTag,
+.pcRightSectionSix .itemCardBox .card a .image .pcTag,
+.pcRightSectionSeven .itemCardBox .card a .image .pcTag,
+.pcRightSectionEight .itemCardBox .card a .image .pcTag,
+.pcRightSectionNine .itemCardBox .card a .image .pcTag,
+.pcRightSectionTen .itemCardBox .card a .image .pcTag,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcTag,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcTag,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcTag,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcTag,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcTag,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcTag,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcTag,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcTag,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcTag,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcTag,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcTag {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionThree .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionFour .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionFive .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionSix .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionSeven .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionEight .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionNine .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionTen .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcTag .cupTag,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcTag .cupTag {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  display: block;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionThree .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionFour .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionFive .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionSix .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionSeven .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionEight .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionNine .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionTen .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcTag .cupTag p,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcTag .cupTag p {
+  background-color: rgba(119, 92, 218, 0.9);
+  font-size: 0.8rem;
+  padding: 0 5px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionThree .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionFour .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionFive .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionSix .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionSeven .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionEight .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionNine .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionTen .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcTag .saleTag,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcTag .saleTag {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  display: block;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionThree .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionFour .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionFive .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionSix .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionSeven .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionEight .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionNine .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionTen .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcTag .saleTag p,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcTag .saleTag p {
+  background-color: #ed293dda;
+  font-size: 0.8rem;
+  padding: 0 5px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcRank,
+.pcRightSectionThree .itemCardBox .card a .image .pcRank,
+.pcRightSectionFour .itemCardBox .card a .image .pcRank,
+.pcRightSectionFive .itemCardBox .card a .image .pcRank,
+.pcRightSectionSix .itemCardBox .card a .image .pcRank,
+.pcRightSectionSeven .itemCardBox .card a .image .pcRank,
+.pcRightSectionEight .itemCardBox .card a .image .pcRank,
+.pcRightSectionNine .itemCardBox .card a .image .pcRank,
+.pcRightSectionTen .itemCardBox .card a .image .pcRank,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcRank,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcRank,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcRank,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcRank,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcRank,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcRank,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcRank,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcRank,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcRank,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcRank,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcRank {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTwo .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTwo .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionThree .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionThree .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionThree .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionFour .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionFour .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionFour .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionFive .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionFive .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionFive .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionSix .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionSix .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionSix .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionSeven .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionSeven .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionSeven .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionEight .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionEight .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionEight .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionNine .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionNine .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionNine .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcRank .number p.three {
+  width: 25px;
+  height: 27px;
+  padding-bottom: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionThree .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionFour .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionFive .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionSix .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionSeven .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionEight .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionNine .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcRank .number p.one,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcRank .number p.one {
+  background-image: url(../images/1.png);
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionThree .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionFour .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionFive .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionSix .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionSeven .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionEight .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionNine .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcRank .number p.two,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcRank .number p.two {
+  background-image: url(../images/2.png);
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionThree .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionFour .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionFive .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionSix .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionSeven .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionEight .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionNine .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcRank .number p.three,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcRank .number p.three {
+  background-image: url(../images/3.png);
+}
+
+.pcRightSectionTwo .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionThree .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionFour .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionFive .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionSix .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionSeven .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionEight .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionNine .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionTen .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionTwelve .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionThirteen .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionFourteen .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionFifteen .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionSixteen .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionSeventeen .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionEighteen .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionNineteen .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionTwenty .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionTwentyOne .itemCardBox .card a .image .pcRank .number p.other,
+.pcRightSectionTwentyTwo .itemCardBox .card a .image .pcRank .number p.other {
+  width: 25px;
+  height: 25px;
+  padding-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail,
+.pcRightSectionThree .itemCardBox .card .itemDetail,
+.pcRightSectionFour .itemCardBox .card .itemDetail,
+.pcRightSectionFive .itemCardBox .card .itemDetail,
+.pcRightSectionSix .itemCardBox .card .itemDetail,
+.pcRightSectionSeven .itemCardBox .card .itemDetail,
+.pcRightSectionEight .itemCardBox .card .itemDetail,
+.pcRightSectionNine .itemCardBox .card .itemDetail,
+.pcRightSectionTen .itemCardBox .card .itemDetail,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail {
+  width: 90%;
+  margin: auto;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionThree .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionFour .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionFive .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionSix .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionSeven .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionEight .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionNine .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionTen .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail h3.itemName,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail h3.itemName {
+  font-size: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-bottom: 15px;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionThree .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionFour .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionFive .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionSix .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionSeven .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionEight .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionNine .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionTen .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail p.itemType,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail p.itemType {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+  padding-bottom: 5px;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionThree .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionFour .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionFive .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionSix .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionSeven .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionEight .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionNine .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionTen .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail p.itemPrice,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail p.itemPrice {
+  font-size: 1.1rem;
+  padding-bottom: 5px;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionThree .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionFour .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionFive .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionSix .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionSeven .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionEight .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionNine .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionTen .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail p.itemPrice::before,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail p.itemPrice::before {
+  content: "¥";
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionThree .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionFour .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionFive .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionSix .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionSeven .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionEight .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionNine .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionTen .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail p.itemColor,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail p.itemColor {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+  padding-bottom: 5px;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionThree .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionFour .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionFive .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionSix .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionSeven .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionEight .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionNine .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionTen .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail .greenTag,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail .greenTag {
+  margin-bottom: 20px;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionThree .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionFour .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionFive .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionSix .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionSeven .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionEight .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionNine .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionTen .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail .greenTag span,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail .greenTag span {
+  font-size: 0.7rem;
+  padding: 3px 5px;
+  background-color: #6eca6e;
+  color: white;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionThree .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionFour .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionFive .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionSix .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionSeven .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionEight .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionNine .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionTen .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail .blackTag,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail .blackTag {
+  margin-bottom: 20px;
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionThree .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionFour .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionFive .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionSix .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionSeven .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionEight .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionNine .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionTen .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail .blackTag span.box,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail .blackTag span.box {
+  background-color: black;
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionThree .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionFour .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionFive .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionSix .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionSeven .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionEight .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionNine .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionTen .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail .blackTag span.box span.whiteBG {
+  font-size: 0.7rem;
+  background-color: white;
+  color: black;
+  padding: 0 2px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.pcRightSectionTwo .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionThree .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionFour .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionFive .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionSix .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionSeven .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionEight .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionNine .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionTen .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionTwelve .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionThirteen .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionFourteen .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionFifteen .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionSixteen .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionSeventeen .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionEighteen .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionNineteen .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionTwenty .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionTwentyOne .itemCardBox .card .itemDetail .blackTag span.box span.blackBG,
+.pcRightSectionTwentyTwo .itemCardBox .card .itemDetail .blackTag span.box span.blackBG {
+  font-size: 0.7rem;
+  color: white;
+  padding: 0 2px;
+  background-color: black;
+}
+
+.pcRightSectionEleven {
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.pcRightSectionEleven .itemCardTitle {
+  padding-bottom: 20px;
+}
+
+.pcRightSectionEleven .itemCardTitle p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #a0a0a0;
+}
+
+.pcRightSectionEleven .itemCardTitle .titleAndLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pcRightSectionEleven .itemCardTitle .titleAndLink h3 {
+  font-size: 1.4rem;
+  color: #181818;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pcRightSectionEleven .itemCardTitle .titleAndLink a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 0.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #23abdd;
+}
+
+.pcRightSectionEleven .brandBox {
+  min-width: 1450px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #3b3b3b;
+  padding: 30px 20px;
+}
+
+.pcRightSectionEleven .brandBox .brandCard {
+  width: 160px;
+  padding-bottom: 20px;
+}
+
+.pcRightSectionEleven .brandBox .brandCard a {
+  width: 100%;
+  text-decoration: none;
+}
+
+.pcRightSectionEleven .brandBox .brandCard a .image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 7px;
+}
+
+.pcRightSectionEleven .brandBox .brandCard a .image img {
+  width: 100%;
+}
+
+.pcRightSectionEleven .brandBox .brandCard a .imageContent h3 {
+  font-size: 0.9rem;
+  color: #fff;
+  padding-bottom: 7px;
+}
+
+.pcRightSectionEleven .brandBox .brandCard a .imageContent p {
+  font-size: 0.7rem;
+  color: #a0a0a0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pcRightSectionEighteen .powerCardBox {
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 880px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pcRightSectionEighteen .powerCardBox a {
+  text-decoration: none;
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard {
+  width: 160px;
+  text-decoration: none;
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image {
+  margin-bottom: 15px;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image img {
+  width: 100%;
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .pcRank {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .pcRank .number p.one,
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .pcRank .number p.two,
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .pcRank .number p.three {
+  width: 25px;
+  height: 27px;
+  padding-bottom: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .pcRank .number p.one {
+  background-image: url(../images/1.png);
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .pcRank .number p.two {
+  background-image: url(../images/2.png);
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .pcRank .number p.three {
+  background-image: url(../images/3.png);
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .pcRank .number p.other {
+  width: 25px;
+  height: 25px;
+  padding-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .cm {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  display: block;
+  text-align: center;
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .cm p {
+  padding: 0 15px 2px 15px;
+  font-size: 0.8rem;
+  color: #fff;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .image .cm p::after {
+  content: "cm";
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .cardContent h3 {
+  font-size: 0.9rem;
+  color: #181818;
+  padding-bottom: 7px;
+}
+
+.pcRightSectionEighteen .powerCardBox a .powerCard .cardContent p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.pcRightSectionNineteen .powerCardBox,
+.pcRightSectionTwenty .powerCardBox,
+.pcRightSectionTwentyOne .powerCardBox,
+.pcRightSectionTwentyTwo .powerCardBox {
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 880px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pcRightSectionNineteen .powerCardBox a,
+.pcRightSectionTwenty .powerCardBox a,
+.pcRightSectionTwentyOne .powerCardBox a,
+.pcRightSectionTwentyTwo .powerCardBox a {
+  text-decoration: none;
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard,
+.pcRightSectionTwenty .powerCardBox a .powerCard,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard {
+  width: 160px;
+  text-decoration: none;
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .image,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image {
+  margin-bottom: 15px;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .image img,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image img,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image img,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image img {
+  width: 100%;
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .image .pcRank,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image .pcRank,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image .pcRank,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image .pcRank {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .image .pcRank .number p.one,
+.pcRightSectionNineteen .powerCardBox a .powerCard .image .pcRank .number p.two,
+.pcRightSectionNineteen .powerCardBox a .powerCard .image .pcRank .number p.three,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image .pcRank .number p.one,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image .pcRank .number p.two,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image .pcRank .number p.three,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image .pcRank .number p.one,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image .pcRank .number p.two,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image .pcRank .number p.three,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image .pcRank .number p.one,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image .pcRank .number p.two,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image .pcRank .number p.three {
+  width: 25px;
+  height: 27px;
+  padding-bottom: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .image .pcRank .number p.one,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image .pcRank .number p.one,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image .pcRank .number p.one,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image .pcRank .number p.one {
+  background-image: url(../images/1.png);
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .image .pcRank .number p.two,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image .pcRank .number p.two,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image .pcRank .number p.two,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image .pcRank .number p.two {
+  background-image: url(../images/2.png);
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .image .pcRank .number p.three,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image .pcRank .number p.three,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image .pcRank .number p.three,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image .pcRank .number p.three {
+  background-image: url(../images/3.png);
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .image .pcRank .number p.other,
+.pcRightSectionTwenty .powerCardBox a .powerCard .image .pcRank .number p.other,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .image .pcRank .number p.other,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image .pcRank .number p.other {
+  width: 25px;
+  height: 25px;
+  padding-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0.8rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .cardContent h3,
+.pcRightSectionTwenty .powerCardBox a .powerCard .cardContent h3,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .cardContent h3,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .cardContent h3 {
+  font-size: 0.9rem;
+  color: #181818;
+  padding-bottom: 7px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pcRightSectionNineteen .powerCardBox a .powerCard .cardContent p,
+.pcRightSectionTwenty .powerCardBox a .powerCard .cardContent p,
+.pcRightSectionTwentyOne .powerCardBox a .powerCard .cardContent p,
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .cardContent p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pcRightSectionTwentyTwo .powerCardBox a {
+  text-decoration: none;
+}
+
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image {
+  width: 160px;
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.pcRightSectionTwentyTwo .powerCardBox a .powerCard .image h4 {
+  font-size: 0.9rem;
+  color: #181818;
+}
+
+.pcRightSectionTwentyThree {
+  padding: 50px 0;
+  border-top: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.pcRightSectionTwentyThree .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
+
+.pcRightSectionTwentyThree .title h3 {
+  font-size: 1.4rem;
+  color: #181818;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pcRightSectionTwentyThree .content {
+  padding-bottom: 20px;
+}
+
+.pcRightSectionTwentyThree .content p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #a0a0a0;
+  line-height: 1.8;
+}
+
+.pcRightSectionTwentyThree .link ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pcRightSectionTwentyThree .link ul li a {
+  font-size: 0.8rem;
+  color: #23abdd;
+}
+
+.pcRightSectionTwentyThree .link ul li.one {
+  padding-right: 10px;
+  border-right: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.pcRightSectionTwentyThree .link ul li.two {
+  border-right: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.pcRightSectionTwentyThree .link ul li.two,
+.pcRightSectionTwentyThree .link ul li.three {
+  padding: 0 10px;
+}
+
+.pcFooterBG {
+  background-color: #efefef;
+  padding: 50px 0;
+}
+
+.pcFooterOne {
+  margin-bottom: 20px;
+}
+
+.footerSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.linkOne ul,
+.linkTwo ul,
+.linkThree ul,
+.linkFour ul,
+.linkFive ul {
+  list-style-type: none;
+}
+
+.linkOne ul li a,
+.linkTwo ul li a,
+.linkThree ul li a,
+.linkFour ul li a,
+.linkFive ul li a {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.linkTwo .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.linkOne,
+.linkTwo,
+.linkThree,
+.linkFour {
+  border-right: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.pcFooterTwo {
+  padding: 10px 0;
+  border-top: 1px solid rgba(45, 45, 45, 0.05);
+  border-bottom: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.pcFooterTwo .link ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+
+.pcFooterTwo .link ul li a {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.pcFooterTwo .link ul li.pRight {
+  padding-right: 10px;
+}
+
+.pcFooterTwo .link ul li.pBoth {
+  padding: 0 10px;
+}
+
+.pcFooterTwo .link ul li.bRight {
+  border-right: 1px solid rgba(45, 45, 45, 0.05);
+}
+
+.pcFooterThree {
+  padding: 30px 0 0 0;
+}
+
+.pcFooterThree p {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+/*# sourceMappingURL=style.css.map */
